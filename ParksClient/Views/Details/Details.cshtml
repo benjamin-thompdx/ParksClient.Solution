@@ -1,0 +1,16 @@
+@{
+  Layout = "_Layout";
+}
+
+@model ParksClient.Models.Detail
+
+<h1>Entry Details: </h1>
+
+<p>Description: @Model.Description</p>
+<p>Address: @Model.Address</p>
+<p>Rating: @Model.Rating</p>
+
+<a href="/Details/Edit/@(Model.DetailId)">Edit this entry</a>
+<br>
+
+<p>@Html.ActionLink("Delete this entry", "Delete", new { id = Model.DetailId })</p>
