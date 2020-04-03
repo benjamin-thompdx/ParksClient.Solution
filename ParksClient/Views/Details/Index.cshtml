@@ -1,0 +1,18 @@
+<h1>All Entry Details:</h1>
+
+<ol>
+@foreach (Details details in Model)
+{
+  <ul>
+    <li>ID: @details.DetailsId</li>
+    <li>Description: @details.Description</li>
+    <li>Address: @details.Address</li>
+    <li>Rating: @details.Rating</li>
+    <li>ParkId: @details.ParkId</li>
+  </ul>
+  <a href="/Details/Details/@(detail.DetailId)"><p>View Details</p></a>
+
+  <br>
+}
+</ol>
+<p>@Html.ActionLink("Add new details", "Create")</p>
