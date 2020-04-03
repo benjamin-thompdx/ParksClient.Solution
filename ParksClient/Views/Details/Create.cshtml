@@ -1,0 +1,20 @@
+@{
+  Layout = "_Layout";
+}
+
+@model ParksClient.Models.Detail
+@using ParksClient.Models;
+
+@using (Html.BeginForm())
+{
+  @Html.Label("Description:")
+  @Html.TextBoxFor(model => model.Description, new { @required="required"})
+  @Html.Label("Select Park")
+  @Html.DropDownList("ParkId")
+  @Html.Label("Physical Address:")
+  @Html.TextBoxFor(model => model.Address, new { @required="required"})
+  @Html.Label("Rating on a scale of 1-5:")
+  @Html.TextBoxFor(model => model.Rating, new { @required="required"})
+  <br>
+  <input type="submit" value="Add these details" class="btn"/>
+}
