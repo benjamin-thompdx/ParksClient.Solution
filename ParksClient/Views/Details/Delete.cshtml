@@ -1,0 +1,11 @@
+@{
+  Layout = "_Layout";
+}
+
+@model ParksClient.Models.Detail
+
+<h1>Are you sure you want to delete this entry?<h1>
+
+<p>@Model.Review</p>
+
+<a href="/Details/Delete/@(Model.DetailId)">Yes, delete this entry</a>
